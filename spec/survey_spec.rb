@@ -9,4 +9,9 @@ describe(Survey) do
       expect(survey.questions()).to(eq([question1, question2]))
     end
   end
+
+  it("capitalizes the name of the survey") do
+    survey = Survey.create({:name => "opinions"})
+    expect(survey.name()).to(eq("Opinions"))
+  end
 end

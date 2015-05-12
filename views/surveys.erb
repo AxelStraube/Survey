@@ -1,15 +1,18 @@
-<h1>Here are all the surveys you have created</h1>
+<h2>
+  <p>Here are all the surveys you have initialized.</p>
+  <p>Select one to Read, Update, or Delete.</p>
+</h2>
 
 <ul>
   <% @surveys.each() do |survey| %>
     <li><%= survey.name() %>
       <a href="/survey/<%= survey.id() %>">
-        <p>Create this survey</p>
+        <p>Go to this survey</p>
       </a>
     </li>
   <% end %>
 </ul>
 
-
-<a href="/survey/new">Create a new survey</a>
+<a href="/survey/new">create a new survey</a>
+<br>
 <a href="/">HOME</a>
